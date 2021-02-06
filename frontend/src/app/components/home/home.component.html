@@ -1,0 +1,4 @@
+<br>
+Komp jest {{isOnline ? "włączony" : "wyłączony"}}
+<mat-slide-toggle [checked]="isOnline" [disabled]="isDisabled" (change)="toggle($event)" title="Włączyć go?"></mat-slide-toggle>
+<app-winamp *ngIf="isTurnedOn"></app-winamp>

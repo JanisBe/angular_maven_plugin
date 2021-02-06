@@ -1,0 +1,26 @@
+<div class="container col-xl-3">
+  <div>{{currentlyPlaying}}</div>
+  <button class="btn" (click)="fireAction($event)" action="backward">
+    <i class="fa fa-backward m-sm-0" aria-hidden="true" action="backward"></i></button>
+  <button class="btn" (click)="fireAction($event)" action="play">
+    <i class="fa fa-play m-sm-0" aria-hidden="true" action="play"></i></button>
+  <button class="btn" (click)="fireAction($event)" action="pause">
+    <i class="fa fa-pause m-sm-0" aria-hidden="true" action="pause"></i></button>
+  <button class="btn" (click)="fireAction($event)" action="stop">
+    <i class="fa fa-stop m-sm-0" aria-hidden="true" action="stop"></i></button>
+  <button class="btn" (click)="fireAction($event)" action="forward">
+    <i class="fa fa-forward m-sm-0" aria-hidden="true" action="forward"></i></button>
+  <br>
+  <button class="btn" (click)="fireAction($event)" action="-15">-15s</button>
+  <button class="btn" (click)="fireAction($event)" action="volup">
+    <i class="fa fa-volume-down" action="voldown"></i>
+  </button>
+  <button class="btn" (click)="fireAction($event)" action="volup">
+    <i class="fa fa-volume-up" action="volup"></i>
+  </button>
+  <button class="btn" (click)="fireAction($event)" action="shuffle">
+    <i class="fa fa-random" action="shuffle"></i>
+  </button>
+
+  <button class="btn" (click)="fireAction($event)" action="+15">+15s</button>
+</div>

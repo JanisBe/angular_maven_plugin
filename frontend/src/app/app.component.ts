@@ -1,24 +1,26 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {ClientService} from './services/client.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'frakton';
-  zmienna: any;
-
-  constructor(private http: HttpClient) {
+export class AppComponent implements OnInit {
+  constructor(private clientService: ClientService,
+              private snackBar: MatSnackBar) {
   }
+
+  isBackendReady = false;
 
   ngOnInit(): void {
-    this.http.get("http://localhost:8080/api",{responseType: 'text'}).subscribe(data => {
-      this.zmienna = data;
-      console.log(data);
+    this.clientService.healthCheck().subscribe(data => {
+      this.isBackendReady = data;
+      if (!data) {
+        this.snackBar.open('Backend service offline', 'Zawrzyj');
+      }
     });
   }
-
 
 }
