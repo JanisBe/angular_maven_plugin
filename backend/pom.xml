@@ -17,9 +17,9 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com</groupId>
+            <groupId>com.janis</groupId>
             <artifactId>frontend</artifactId>
-            <version>${project.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
             <scope>runtime</scope>
         </dependency>
  <dependency>
