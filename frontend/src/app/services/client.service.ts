@@ -52,7 +52,7 @@ export class ClientService {
     winampAction(action: string): Observable<string> {
         let headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Basic ' + btoa('root' + ':' + 'HasloRouter12#')
+            'Authorization': 'Basic ' + btoa('root' + ':' + 'tajne')
         };
 
         const response = this.http.get('http://localhost:999/winamp/' + action, {

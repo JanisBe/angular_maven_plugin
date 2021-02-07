@@ -1,26 +1,26 @@
 <div class="container col-xl-3">
-  <div>teraz gra: {{currentlyPlaying}}</div>
-  <button class="btn" (click)="fireAction($event)" data-action="prev">
-    <i class="fa fa-backward m-sm-0" aria-hidden="true" data-action="prev"></i></button>
-  <button #play class="btn" (click)="fireAction($event)" data-action="play">
-    <i class="fa fa-play m-sm-0" aria-hidden="true" data-action="play"></i></button>
-  <button #pause class="btn" (click)="fireAction($event)" data-action="pause">
-    <i class="fa fa-pause m-sm-0" aria-hidden="true" data-action="pause"></i></button>
-  <button class="btn" (click)="fireAction($event)" data-action="stop">
-    <i class="fa fa-stop m-sm-0" aria-hidden="true" data-action="stop"></i></button>
-  <button class="btn" (click)="fireAction($event)" data-action="next">
-    <i class="fa fa-forward m-sm-0" aria-hidden="true" data-action="next"></i></button>
-  <br>
-  <button class="btn" (click)="fireAction($event)" data-action="-15">-15s</button>
-  <button class="btn" (click)="fireAction($event)" data-action="volup">
-    <i class="fa fa-volume-down" data-action="voldown"></i>
-  </button>
-  <button class="btn" (click)="fireAction($event)" data-action="volup">
-    <i class="fa fa-volume-up" data-action="volup"></i>
-  </button>
-  <button class="btn" (click)="fireAction($event)" data-action="shuffle">
-    <i class="fa fa-random" data-action="shuffle"></i>
-  </button>
+    <div>teraz gra: {{currentlyPlaying}}</div>
+    <button class="btn" (click)="fireAction($event)" data-action="prev">
+        <i class="fa fa-backward m-sm-0"></i></button>
+    <button class="btn" (click)="fireAction($event)"  data-action="play">
+        <i class="fa fa-play m-sm-0"></i></button>
+    <button class="btn" (click)="fireAction($event)" data-action="pause">
+        <i class="fa fa-pause m-sm-0" ></i></button>
+    <button class="btn" (click)="fireAction($event)" data-action="stop">
+        <i class="fa fa-stop m-sm-0"></i></button>
+    <button class="btn" (click)="fireAction($event)" data-action="next">
+        <i class="fa fa-forward m-sm-0"></i></button>
+    <br>
+    <button class="btn" (click)="fireAction($event)" data-action="rev">-5s</button>
+    <button class="btn" (click)="fireAction($event)" data-action="volup">
+        <i class="fa fa-volume-down"></i>
+    </button>
+    <button class="btn" (click)="fireAction($event)" data-action="volup">
+        <i class="fa fa-volume-up"></i>
+    </button>
+    <button class="btn" (click)="fireAction($event)" data-action="random">
+        <i class="fa fa-random"></i>
+    </button>
 
-  <button class="btn" (click)="fireAction($event)" data-action="+15">+15s</button>
+    <button class="btn" (click)="fireAction($event)" data-action="fwd">+5s</button>
 </div>
