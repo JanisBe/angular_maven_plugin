@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.clientService.checkOnline().subscribe(value => {
       this.isOnline = value;
+      this.isTurnedOn = value;
     });
   }
 

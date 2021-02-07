@@ -13,12 +13,16 @@ export class WinampComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.clientService.winampAction('TITLE').subscribe((value => this.currentlyPlaying = value));
+    this.clientService.winampAction('TITLE').subscribe((value => {
+      this.currentlyPlaying = value
+    }));
   }
 
   fireAction($event: MouseEvent): void {
-    const action = ($event.target as HTMLButtonElement).getAttribute('action');
-    this.clientService.winampAction(action);
-    console.log(action);
+    const action = ($event.target as HTMLButtonElement);
+    const akcja = action.getAttribute('data-action');
+    this.clientService.winampAction(akcja).subscribe((value => {
+      console.log("subs" + value);
+    }));
   }
 }
