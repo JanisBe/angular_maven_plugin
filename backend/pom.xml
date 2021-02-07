@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com</groupId>
+            <groupId>com.janis</groupId>
             <artifactId>frontend</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
